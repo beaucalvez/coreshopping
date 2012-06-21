@@ -478,7 +478,7 @@ a.highlight {background: @highlight-color;}
 
 
 /* HEADER --------------------------------------------------------------- */
-body > header:first-child {
+body .primary {
 	background: #000;
 	background-attachment: fixed;
 	/* TODO: Remove height */
@@ -494,7 +494,6 @@ body > header:first-child {
 		background: #232323;
 		/* TODO: Remove height */
 		height: 81px;
-
 	}
 	
 
@@ -600,26 +599,33 @@ section {
 	/* Focal sprite with info box */
 	.sprite.focal {
 		left:607px;
-		top: 1500px;
+		top: 800px;
 		z-index: 250;
 	}
-	/* small blurry diamond */
+	/* small blurry bird on the left` */
 	.sprite.elementOne {
 		left:30px;
 		top: 600px;
-		z-index: 240;
+		z-index: 210;
 	}
-	/* large blurry diamond */
+	/* large blurry bird on the bottom middle */
 	.sprite.elementTwo {
 		left:748px;
 		top: 1300px;
 		z-index: 190;
 	}
-	/* shopping hours */
+	/* Small blurry bird on the right */
 	.sprite.elementThree {
 		left:460px;
 		top: 1000px;
 		z-index: 220;
+	}
+	/* Three content buhkets */
+	.sprite.thumbmatrix {
+		left: 367px;
+		top:1658px;
+		z-index: 215;
+	
 	}
 
 }
@@ -630,10 +636,49 @@ section {
 	background: transparent url(/img/Lingillustraitons_3_sittingwoman.png) top left no-repeat;
 	position: relative;
 	
-	.sprite {
-		top: 650px;
-		left: 300px;
+	/* Focal sprite with info box */
+	.sprite.focal {
+		left:607px;
+		top: 800px;
+		z-index: 250;
 	}
+	/* small blurry leaf on the left` */
+	.sprite.elementOne {
+		left:30px;
+		top: 600px;
+		z-index: 210;
+	}
+	/* large blurry leaf */
+	.sprite.elementTwo {
+		left:748px;
+		top: 1300px;
+		z-index: 190;
+	}
+	/* Small blurry leaf on the right */
+	.sprite.elementThree {
+		left:460px;
+		top: 1000px;
+		z-index: 220;
+	}
+	/* Small blurry leaf on the right */
+	.sprite.elementFour {
+		left:0px;
+		top: 800px;
+		z-index: 221;
+	}
+	/* Small blurry leaf on the right */
+	.sprite.elementThree {
+		left:1300px;
+		top: 1300px;
+		z-index: 280;
+	}
+	/* Three content buhkets */
+	.sprite.thumbmatrix {
+		left: 175px;
+		top:1658px;
+		z-index: 215;
+	}
+
 }
 /* Parallax-section-end ------------------------------------------------------ */
 	
@@ -656,14 +701,30 @@ section {
 		font-size: 40/16em;
 	}
 	
-	h3 {font-size: 18/16em;color:@highlight-color;}
+	h3 {font-size: 18/16em;color:@highlight-color;padding-top:10px}
 	h3 + p {padding-bottom:1em;}
 	
 	&.pop {position:relative;width: 375px;}
 	.closer {position:absolute; top:10px;right:14px;}
+	
+	
+	
 }
+.thumbmatrix {
+	.infoBox  {padding:0 0 10px 0;width:225px;margin-right:20px;float:left;}
+	li {padding:0 10px;}
+	li:first-child{padding:0;}
+	li ul {float:none; padding:5px 0 11px;}
+	li li {list-style-type: disc;font-size: 12/16em;padding:0;list-style-position: inside;}
+	p {font-size: 12/16em;}
 	
+	.tilematrix {
+		
+		li {float:left;margin-right:10px;list-style-type: none;padding:10px 0 0 0;}
+		li.nomargin {margin-right: 0;}
+	}
 	
+	}
 
 
 

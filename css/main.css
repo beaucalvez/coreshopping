@@ -389,7 +389,7 @@ a.highlight {
   background: #e51a1a;
 }
 /* HEADER --------------------------------------------------------------- */
-body > header:first-child {
+body .primary {
   background: #000;
   background-attachment: fixed;
   /* TODO: Remove height */
@@ -400,12 +400,12 @@ body > header:first-child {
   /* Main nav */
 
 }
-body > header:first-child nav.supplemental {
+body .primary nav.supplemental {
   /* TODO: Remove height */
 
   height: 26px;
 }
-body > header:first-child nav.main {
+body .primary nav.main {
   background: #232323;
   /* TODO: Remove height */
 
@@ -514,22 +514,24 @@ section.two {
   z-index: 200;
   /* Focal sprite with info box */
 
-  /* small blurry diamond */
+  /* small blurry bird on the left` */
 
-  /* large blurry diamond */
+  /* large blurry bird on the bottom middle */
 
-  /* shopping hours */
+  /* Small blurry bird on the right */
+
+  /* Three content buhkets */
 
 }
 .beta .sprite.focal {
   left: 607px;
-  top: 1500px;
+  top: 800px;
   z-index: 250;
 }
 .beta .sprite.elementOne {
   left: 30px;
   top: 600px;
-  z-index: 240;
+  z-index: 210;
 }
 .beta .sprite.elementTwo {
   left: 748px;
@@ -541,16 +543,66 @@ section.two {
   top: 1000px;
   z-index: 220;
 }
+.beta .sprite.thumbmatrix {
+  left: 367px;
+  top: 1658px;
+  z-index: 215;
+}
 .gamma {
   /* Woman sitting down */
 
   height: 1820px;
   background: transparent url(/img/Lingillustraitons_3_sittingwoman.png) top left no-repeat;
   position: relative;
+  /* Focal sprite with info box */
+
+  /* small blurry leaf on the left` */
+
+  /* large blurry leaf */
+
+  /* Small blurry leaf on the right */
+
+  /* Small blurry leaf on the right */
+
+  /* Small blurry leaf on the right */
+
+  /* Three content buhkets */
+
 }
-.gamma .sprite {
-  top: 650px;
-  left: 300px;
+.gamma .sprite.focal {
+  left: 607px;
+  top: 800px;
+  z-index: 250;
+}
+.gamma .sprite.elementOne {
+  left: 30px;
+  top: 600px;
+  z-index: 210;
+}
+.gamma .sprite.elementTwo {
+  left: 748px;
+  top: 1300px;
+  z-index: 190;
+}
+.gamma .sprite.elementThree {
+  left: 460px;
+  top: 1000px;
+  z-index: 220;
+}
+.gamma .sprite.elementFour {
+  left: 0px;
+  top: 800px;
+  z-index: 221;
+}
+.gamma .sprite.elementThree {
+  left: 1300px;
+  top: 1300px;
+  z-index: 280;
+}
+.gamma .sprite.thumbmatrix {
+  left: 175px;
+  top: 1658px;
+  z-index: 215;
 }
 /* Parallax-section-end ------------------------------------------------------ */
 /* Common Elements ----------------------------------------------------------- */
@@ -585,6 +637,7 @@ section.two {
 .infoBox h3 {
   font-size: 1.125em;
   color: #e51a1a;
+  padding-top: 10px;
 }
 .infoBox h3 + p {
   padding-bottom: 1em;
@@ -597,6 +650,40 @@ section.two {
   position: absolute;
   top: 10px;
   right: 14px;
+}
+.thumbmatrix .infoBox {
+  padding: 0 0 10px 0;
+  width: 225px;
+  margin-right: 20px;
+  float: left;
+}
+.thumbmatrix li {
+  padding: 0 10px;
+}
+.thumbmatrix li:first-child {
+  padding: 0;
+}
+.thumbmatrix li ul {
+  float: none;
+  padding: 5px 0 11px;
+}
+.thumbmatrix li li {
+  list-style-type: disc;
+  font-size: 0.75em;
+  padding: 0;
+  list-style-position: inside;
+}
+.thumbmatrix p {
+  font-size: 0.75em;
+}
+.thumbmatrix .tilematrix li {
+  float: left;
+  margin-right: 10px;
+  list-style-type: none;
+  padding: 10px 0 0 0;
+}
+.thumbmatrix .tilematrix li.nomargin {
+  margin-right: 0;
 }
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
