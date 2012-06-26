@@ -423,17 +423,17 @@ section {
 }
 section.zero {
   background-image: url(/img/bg.top.jpg);
-  height: 1985px;
+  height: 1785px;
   background-attachment: fixed;
 }
 section.one {
   background-image: url(/img/bg.mid.jpg);
-  height: 1160px;
+  height: 1832px;
   background-attachment: fixed;
 }
 section.two {
   background-image: url(/img/bg.bottom.jpg);
-  height: 1440px;
+  height: 1500px;
   background-attachment: fixed;
 }
 .sprite {
@@ -555,24 +555,24 @@ section.two {
 }
 .beta .sprite.man {
   left: 0;
-  top: -175px;
+  top: 200px;
   z-index: 220;
 }
 .beta .sprite.focal {
-  left: 607px;
-  top: 190px;
+  left: 689px;
+  top: 462px;
   z-index: 250;
   /* hidden infobox positioning */
 
 }
 .beta .sprite.focal .pop {
-  top: 180px;
-  left: 89px;
+  top: 202px;
+  left: -230px;
 }
 .beta .sprite.elementOne {
   left: 30px;
   top: 600px;
-  z-index: 210;
+  z-index: 220;
 }
 .beta .sprite.elementTwo {
   left: 748px;
@@ -582,11 +582,11 @@ section.two {
 .beta .sprite.elementThree {
   left: 460px;
   top: 1950px;
-  z-index: 250;
+  z-index: 271;
 }
 .beta .sprite.thumbmatrix {
   left: 367px;
-  top: 800px;
+  top: 1300px;
   z-index: 270;
 }
 .gamma {
@@ -615,12 +615,10 @@ section.two {
 }
 .gamma .sprite.womansit {
   left: 390px;
-  top: -130px;
+  top: 400px;
   z-index: 201;
 }
 .gamma .sprite.branchesleft {
-  left: 1pxpx;
-  top: 30px;
   z-index: 200;
 }
 .gamma .sprite.branchesright {
@@ -629,20 +627,20 @@ section.two {
   z-index: 223;
 }
 .gamma .sprite.focal {
-  left: 607px;
+  left: 200px;
   top: 600px;
   z-index: 250;
   /* hidden infobox positioning */
 
 }
 .gamma .sprite.focal .pop {
-  top: 185px;
-  left: -230px;
+  top: 225px;
+  left: 200px;
 }
 .gamma .sprite.elementOne {
   left: 30px;
   top: 600px;
-  z-index: 210;
+  z-index: 199;
 }
 .gamma .sprite.elementTwo {
   left: 748px;

@@ -37,9 +37,9 @@
 <nav class="main">navigation</nav>
 </header>
 
-<div class="bgcontainer" data-stellar-background-ratio=".2">
+<div class="bgcontainer">
 <!-- WOMAN ON THE TOP -->
-<section class="zero" >
+<section class="zero" data-stellar-background-ratio=".2">
 	<div class="scrollblock">
 	<article class="alpha">
 		<!-- Woman -->
@@ -78,9 +78,11 @@
 		</article>
 		
 		<!-- Dress element transition -->
+<!-- 
 		<article class="sprite dresstransition">
 			<img src="/img/Lingillustrations_1_dressextension.png" alt="" />
 		</article>
+ -->
 		<!-- Shopping Hours -->
 		<article class="sprite infoBox shoppingHours clearfix" data-stellar-ratio="1.5">
 			<h2>Shopping Hours</h2>
@@ -129,7 +131,7 @@
 		<div class="sprite elementThree">
 			<img src="/img/bird.small.alt.png" alt="Humming bird" />
 		</div>
-		<div class="sprite thumbmatrix" data-stellar-ratio="1.9">
+		<div class="sprite thumbmatrix" data-stellar-ratio="1.4">
 			<ul class="infoBox">
 			  <li><img src="/img/bucket.one.jpg" alt="Free Valet Service" /></li>
 			  <li><h3>Free Valet Service</h3></li>
@@ -174,7 +176,7 @@
 		<div class="sprite elementTwo">
 			<img src="/img/leaf.large.png" alt="Autumn leaves" />
 		</div>
-		<!-- PRODUCT HIGHLIGHT – LV Clutch :<##> -->
+		<!-- PRODUCT HIGHLIGHT – LV Clutch  -->
 		<article class="sprite focal" data-stellar-ratio="1.65">
 			<img src="/img/lv.clutch.png" alt="Louis Vuitton Clutch" />
 			<div class="infoBox pop" style="display:none;">
@@ -255,33 +257,58 @@
 <script src="js/vendor/jquery.scrollorama.js"></script>
 <script>
 $(document).ready(function(){
-	$.stellar();
+	$.stellar({
+	
+		hideDistantElements: false
+	
+	});
 	var scrollorama = $.scrollorama({ blocks:'.scrollblock' });
 
 	// WOMAN ON THE TOP ----------------------------------------------------------------
 	scrollorama.animate('.alpha .womandress',{ delay: 1600, duration: 200, property:'left', start:60, end:1098 });
-	scrollorama.animate('.alpha .dresstransition',{ delay: 1600, duration: 200, property:'left', start:-1038, end:0 });
+	scrollorama.animate('.alpha .womandress',{ delay: 1600, duration: 100, property:'top', start:20, end:-2500 });
+	// scrollorama.animate('.alpha .dresstransition',{ delay: 1600, duration: 300, property:'left', start:-1038, end:1700 });
+
 
 	// MAN IN THE MIDDLE ---------------------------------------------------------------
-	scrollorama.animate('.beta .elementOne',{ delay: 0, duration: 1200, property:'left', start:0, end:1400 });
-	scrollorama.animate('.beta .elementOne',{ delay: 0, duration: 800, property:'top', start:500, end:0 });
-	scrollorama.animate('.beta .elementTwo',{ delay: 0, duration: 700, property:'left', start:1300, end:0 });
-	scrollorama.animate('.beta .elementTwo',{ delay: 0, duration: 700, property:'top', start:1300, end:-300 });
-	scrollorama.animate('.beta .elementThree',{ delay: 300, duration: 1300, property:'left', start:0, end:900 });
-	scrollorama.animate('.beta .elementThree',{ delay: 300, duration: 1300, property:'top', start:1200, end:-200 });
+	scrollorama.animate('.beta .elementOne',{ delay: 140, duration: 1000, property:'left', start:0, end:1400 });
+	scrollorama.animate('.beta .elementOne',{ delay: 140, duration: 1000, property:'top', start:300, end:-300 });
+	scrollorama.animate('.beta .elementTwo',{ delay: 400, duration: 700, property:'left', start:880, end:0 });
+	scrollorama.animate('.beta .elementTwo',{ delay: 400, duration: 700, property:'top', start:470, end:-300 });
+	scrollorama.animate('.beta .elementThree',{ delay: 900, duration: 900, property:'left', start:200, end:1200 });
+	scrollorama.animate('.beta .elementThree',{ delay: 900, duration: 900, property:'top', start:1250, end:-300 });
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// WOMAN ON THE BOTTOM ------------------------------------------------------------
-	scrollorama.animate('.gamma .elementOne',{ delay: 0, duration: 1300, property:'left', start:0, end:1300 });
+	scrollorama.animate('.gamma .elementOne',{ delay: 400, duration: 1300, property:'left', start:0, end:1300 });
 // 	scrollorama.animate('.gamma .elementOne',{ delay: 300, duration: 1300, property:'top', start:1200, end:-200 });
 	scrollorama.animate('.gamma .elementTwo',{ delay: 200, duration: 1150, property:'left', start:200, end:1600 });
 	scrollorama.animate('.gamma .elementTwo',{ delay: 200, duration: 1300, property:'top', start:1200, end:-200 });
-	scrollorama.animate('.gamma .elementThree',{ delay: 100, duration: 1200, property:'left', start:700, end:1500 });
-	scrollorama.animate('.gamma .elementThree',{ delay: 150, duration: 1000, property:'top', start:1600, end:-100 });
-	scrollorama.animate('.gamma .elementFour',{ delay: 220, duration: 1120, property:'left', start:100, end:1200 });
-	scrollorama.animate('.gamma .elementFour',{ delay: 220, duration: 1100, property:'top', start:1400, end:-50 });
+	scrollorama.animate('.gamma .elementThree',{ delay: 900, duration: 1200, property:'left', start:-200, end:1500 });
+	scrollorama.animate('.gamma .elementThree',{ delay: 900, duration: 1000, property:'top', start:900, end:-100 });
+	scrollorama.animate('.gamma .elementFour',{ delay: 520, duration: 1120, property:'left', start:100, end:1200 });
+	scrollorama.animate('.gamma .elementFour',{ delay: 420, duration: 1100, property:'top', start:1400, end:-50 });
 	
-	scrollorama.animate('.gamma .branchesright',{ delay: 0, duration: 800, property:'top', start:1100, end:-1000 });
-	scrollorama.animate('.gamma .branchesleft',{ delay: 100, duration: 650, property:'top', start:1400, end:-1100 });
+	scrollorama.animate('.gamma .branchesright',{ delay: 0, duration: 800, property:'top', start:1300, end:-1000 });
+	scrollorama.animate('.gamma .branchesleft',{ delay: 100, duration: 650, property:'top', start:-100, end:-1100 });
 
 	//scrollorama.animate('.gamma .elementFive',{ delay: 75, duration: 800, property:'left', start:0, end:1400 });
 	//scrollorama.animate('.gamma .elementFive',{ delay: 100, duration: 850, property:'top', start:1600, end:-100 });
