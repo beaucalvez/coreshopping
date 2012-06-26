@@ -412,6 +412,7 @@ body .primary nav.main {
   height: 81px;
 }
 /* Parallax-sections-start ---------------------------------------------- */
+/* .bgcontainer {background-image:url(/img/bg.combined.jpg);background-attachment: fixed;} */
 section {
   /* Top illustration background */
 
@@ -422,7 +423,7 @@ section {
 }
 section.zero {
   background-image: url(/img/bg.top.jpg);
-  height: 2225px;
+  height: 1985px;
   background-attachment: fixed;
 }
 section.one {
@@ -432,17 +433,19 @@ section.one {
 }
 section.two {
   background-image: url(/img/bg.bottom.jpg);
-  height: 1820px;
+  height: 1440px;
   background-attachment: fixed;
 }
 .sprite {
   position: absolute;
 }
+.sprite.focal {
+  cursor: pointer;
+}
 .alpha {
   /* Woman in dress */
 
   height: 1820px;
-  background: transparent url(/img/Lingillustraitons_1_dresswoman.png) 100px 0 no-repeat;
   position: relative;
   z-index: 200;
   /* Main header */
@@ -453,6 +456,8 @@ section.two {
 
   /* large blurry diamond */
 
+  /* alternate small blurry diamond */
+
   /* shopping hours */
 
   /* Dress element */
@@ -462,6 +467,7 @@ section.two {
   font-size: 3.125em;
   line-height: 1.18em;
   font-weight: normal;
+  margin-top: 10px;
   margin-left: -140px;
   margin-right: -140px;
 }
@@ -487,24 +493,42 @@ section.two {
   position: relative;
   top: 103px;
 }
+.alpha .sprite.womandress {
+  left: 60px;
+  top: 20px;
+  z-index: 200;
+}
 .alpha .sprite.focal {
-  left: 226px;
-  top: 538px;
+  left: 350px;
+  top: 738px;
   z-index: 250;
+  /* hidden infobox positioning */
+
+}
+.alpha .sprite.focal .pop {
+  top: 125px;
+  left: 120px;
+  z-index: -10;
 }
 .alpha .sprite.elementOne {
-  left: 744px;
-  top: 891px;
+  left: 1024px;
+  top: 1091px;
   z-index: 240;
+  background-attachment: fixed;
 }
 .alpha .sprite.elementTwo {
-  left: 0;
-  top: 538px;
-  z-index: 190;
+  left: 80px;
+  top: 1000px;
+  z-index: 230;
+}
+.alpha .sprite.elementThree {
+  left: 550px;
+  top: 2600px;
+  z-index: 231;
 }
 .alpha .sprite.shoppingHours {
   left: 120px;
-  top: 1044px;
+  top: 1644px;
   z-index: 220;
 }
 .alpha .sprite.dresstransition {
@@ -531,13 +555,19 @@ section.two {
 }
 .beta .sprite.man {
   left: 0;
-  top: -400px;
+  top: -175px;
   z-index: 220;
 }
 .beta .sprite.focal {
   left: 607px;
-  top: 400px;
+  top: 190px;
   z-index: 250;
+  /* hidden infobox positioning */
+
+}
+.beta .sprite.focal .pop {
+  top: 180px;
+  left: 89px;
 }
 .beta .sprite.elementOne {
   left: 30px;
@@ -547,27 +577,28 @@ section.two {
 .beta .sprite.elementTwo {
   left: 748px;
   top: 1300px;
-  z-index: 190;
+  z-index: 221;
 }
 .beta .sprite.elementThree {
   left: 460px;
-  top: 1000px;
+  top: 1950px;
   z-index: 250;
 }
 .beta .sprite.thumbmatrix {
   left: 367px;
-  top: 990px;
+  top: 800px;
   z-index: 270;
 }
 .gamma {
   height: 1820px;
-  background: transparent url(/img/branch-R.png) top right no-repeat;
   position: relative;
   /* Woman sitting down */
 
   /* Focal sprite with info box */
 
   /* Focal sprite with info box */
+
+  /* Focal sprite with info box about product */
 
   /* small blurry leaf on the left` */
 
@@ -584,18 +615,29 @@ section.two {
 }
 .gamma .sprite.womansit {
   left: 390px;
-  top: 0;
+  top: -130px;
   z-index: 201;
 }
 .gamma .sprite.branchesleft {
-  left: 0;
-  top: 0;
-  z-index: 180;
+  left: 1pxpx;
+  top: 30px;
+  z-index: 200;
+}
+.gamma .sprite.branchesright {
+  right: 0;
+  top: 1px;
+  z-index: 223;
 }
 .gamma .sprite.focal {
   left: 607px;
-  top: 800px;
+  top: 600px;
   z-index: 250;
+  /* hidden infobox positioning */
+
+}
+.gamma .sprite.focal .pop {
+  top: 185px;
+  left: -230px;
 }
 .gamma .sprite.elementOne {
   left: 30px;
@@ -624,7 +666,7 @@ section.two {
 }
 .gamma .sprite.thumbmatrix {
   left: 175px;
-  top: 1658px;
+  top: 1258px;
   z-index: 215;
 }
 /* Parallax-section-end ------------------------------------------------------ */
@@ -671,6 +713,9 @@ section.two {
   top: 0;
   left: 0;
   z-index: 10;
+}
+.infoBox.pop h3 {
+  padding-top: 0;
 }
 .infoBox.pop img {
   position: relative;
