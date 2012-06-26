@@ -443,8 +443,8 @@ td {
 /* Variables ------------------------------------------------------------- */
 
 /* Fonts  */
-@serif: Garamond, "Times New Roman", Times, Georgia, serif; 
-@sans-serif: Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
+@serif: Lora, Garamond, "Times New Roman", Times, Georgia, serif; 
+@sans-serif: Lato, Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
 
 /* Color */
 @font-color: #242424;
@@ -504,21 +504,21 @@ body .primary {
 section {
 	/* Top illustration background */
 	&.zero{
-		background-image:url(/img/bg.top.png);
-		height: 1820px;
+		background-image:url(/img/bg.top.jpg);
+		height: 2225px;
 		background-attachment: fixed;
 	}
 	
 	/* Middle illustration background*/
 	&.one{
-		background-image:url(/img/bg.mid.png);
-		height: 1820px;
+		background-image:url(/img/bg.mid.jpg);
+		height: 1160px;
 		background-attachment: fixed;
 	}
 	
 	/* Last illustration background*/
 	&.two{
-		background-image:url(/img/bg.bottom.png);
+		background-image:url(/img/bg.bottom.jpg);
 		height: 1820px;
 		background-attachment: fixed;
 	}
@@ -529,7 +529,7 @@ section {
 .alpha {/* Woman in dress */
 	
 	height:1820px;
-	background: transparent url(/img/Lingillustraitons_1_dresswoman.png) top left no-repeat;
+	background: transparent url(/img/Lingillustraitons_1_dresswoman.png) 100px 0 no-repeat;
 	position: relative;
 	z-index: 200;
 	
@@ -585,21 +585,36 @@ section {
 		top: 1044px;
 		z-index: 220;
 	}
+	/* Dress element */
+	.sprite.dresstransition {
+		left:-1038px;
+		top: 1529px;
+		z-index: 201; 
+	}
 
 	
 }
 
 .beta {/* Man */
 	
-	height:1820px;
-	background: transparent url(/img/Lingillustraitons_2_man.png) top left no-repeat;
+	height:1520px;
 	position: relative;
 	z-index: 200;
+	
+	.sprite.man {
+		left:0;
+		top:-400px;
+		z-index: 220;
+	
+	
+	
+	} 
+	
 	
 	/* Focal sprite with info box */
 	.sprite.focal {
 		left:607px;
-		top: 800px;
+		top: 400px;
 		z-index: 250;
 	}
 	/* small blurry bird on the left` */
@@ -618,23 +633,36 @@ section {
 	.sprite.elementThree {
 		left:460px;
 		top: 1000px;
-		z-index: 220;
+		z-index: 250;
 	}
 	/* Three content buhkets */
 	.sprite.thumbmatrix {
-		left: 367px;
-		top:1658px;
-		z-index: 215;
+		left:367px;
+		top:990px;
+		z-index: 270;
 	
 	}
 
 }
 
 .gamma {
-	/* Woman sitting down */
+
 	height:1820px;
-	background: transparent url(/img/Lingillustraitons_3_sittingwoman.png) top left no-repeat;
+	background: transparent url(/img/branch-R.png) top right no-repeat;
 	position: relative;
+	/* Woman sitting down */
+	.sprite.womansit {
+		left: 390px;
+		top: 0;
+		z-index: 201;
+	}
+	/* Focal sprite with info box */
+	.sprite.branchesleft {
+		left:0;
+		top: 0;
+		z-index: 180;
+	}
+
 	
 	/* Focal sprite with info box */
 	.sprite.focal {
@@ -667,7 +695,7 @@ section {
 		z-index: 221;
 	}
 	/* Small blurry leaf on the right */
-	.sprite.elementThree {
+	.sprite.elementFive {
 		left:1300px;
 		top: 1300px;
 		z-index: 280;
@@ -694,17 +722,25 @@ section {
 	ul {padding:0;margin:0;float:left;}
 	ul.first {margin-right:14px;}
 	li {padding:.7em 0 0;}
-	li:first-child {padding-top: 0;}
+	li:first-child {padding: 0;}
 	/* Positioned outside the box */
 	
 	h2 {
 		font-size: 40/16em;
 	}
 	
-	h3 {font-size: 18/16em;color:@highlight-color;padding-top:10px}
+	h3 {font-size: 17/16em;color:@highlight-color;padding-top:10px}
 	h3 + p {padding-bottom:1em;}
 	
-	&.pop {position:relative;width: 375px;}
+	&.pop {
+		position:absolute;
+		width: 375px;
+		top:0;
+		left:0;
+		z-index:10;
+		
+		img {position:relative;z-index: 20;}
+	}
 	.closer {position:absolute; top:10px;right:14px;}
 	
 	
@@ -712,9 +748,10 @@ section {
 }
 .thumbmatrix {
 	.infoBox  {padding:0 0 10px 0;width:225px;margin-right:20px;float:left;}
-	li {padding:0 10px;}
-	li:first-child{padding:0;}
-	li ul {float:none; padding:5px 0 11px;}
+	li {padding:0 10px;}bbed
+	
+	li:first-child{padding:0 !important;}
+	li ul {float:none;padding:5px 0 11px;}
 	li li {list-style-type: disc;font-size: 12/16em;padding:0;list-style-position: inside;}
 	p {font-size: 12/16em;}
 	
@@ -724,7 +761,7 @@ section {
 		li.nomargin {margin-right: 0;}
 	}
 	
-	}
+}
 
 
 

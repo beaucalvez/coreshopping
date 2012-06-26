@@ -352,11 +352,11 @@ td {
 /* Fonts  */
 /* Color */
 body {
-  font-family: Garamond, "Times New Roman", Times, Georgia, serif;
+  font-family: Lora, Garamond, "Times New Roman", Times, Georgia, serif;
   color: #242424;
 }
 nav.main {
-  font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
+  font-family: Lato, Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
 }
 /* transitions */
 /* Links ----------------------------------------------------------------- */
@@ -421,17 +421,17 @@ section {
 
 }
 section.zero {
-  background-image: url(/img/bg.top.png);
-  height: 1820px;
+  background-image: url(/img/bg.top.jpg);
+  height: 2225px;
   background-attachment: fixed;
 }
 section.one {
-  background-image: url(/img/bg.mid.png);
-  height: 1820px;
+  background-image: url(/img/bg.mid.jpg);
+  height: 1160px;
   background-attachment: fixed;
 }
 section.two {
-  background-image: url(/img/bg.bottom.png);
+  background-image: url(/img/bg.bottom.jpg);
   height: 1820px;
   background-attachment: fixed;
 }
@@ -442,7 +442,7 @@ section.two {
   /* Woman in dress */
 
   height: 1820px;
-  background: transparent url(/img/Lingillustraitons_1_dresswoman.png) top left no-repeat;
+  background: transparent url(/img/Lingillustraitons_1_dresswoman.png) 100px 0 no-repeat;
   position: relative;
   z-index: 200;
   /* Main header */
@@ -454,6 +454,8 @@ section.two {
   /* large blurry diamond */
 
   /* shopping hours */
+
+  /* Dress element */
 
 }
 .alpha h1 {
@@ -505,11 +507,15 @@ section.two {
   top: 1044px;
   z-index: 220;
 }
+.alpha .sprite.dresstransition {
+  left: -1038px;
+  top: 1529px;
+  z-index: 201;
+}
 .beta {
   /* Man */
 
-  height: 1820px;
-  background: transparent url(/img/Lingillustraitons_2_man.png) top left no-repeat;
+  height: 1520px;
   position: relative;
   z-index: 200;
   /* Focal sprite with info box */
@@ -523,9 +529,14 @@ section.two {
   /* Three content buhkets */
 
 }
+.beta .sprite.man {
+  left: 0;
+  top: -400px;
+  z-index: 220;
+}
 .beta .sprite.focal {
   left: 607px;
-  top: 800px;
+  top: 400px;
   z-index: 250;
 }
 .beta .sprite.elementOne {
@@ -541,19 +552,21 @@ section.two {
 .beta .sprite.elementThree {
   left: 460px;
   top: 1000px;
-  z-index: 220;
+  z-index: 250;
 }
 .beta .sprite.thumbmatrix {
   left: 367px;
-  top: 1658px;
-  z-index: 215;
+  top: 990px;
+  z-index: 270;
 }
 .gamma {
+  height: 1820px;
+  background: transparent url(/img/branch-R.png) top right no-repeat;
+  position: relative;
   /* Woman sitting down */
 
-  height: 1820px;
-  background: transparent url(/img/Lingillustraitons_3_sittingwoman.png) top left no-repeat;
-  position: relative;
+  /* Focal sprite with info box */
+
   /* Focal sprite with info box */
 
   /* small blurry leaf on the left` */
@@ -568,6 +581,16 @@ section.two {
 
   /* Three content buhkets */
 
+}
+.gamma .sprite.womansit {
+  left: 390px;
+  top: 0;
+  z-index: 201;
+}
+.gamma .sprite.branchesleft {
+  left: 0;
+  top: 0;
+  z-index: 180;
 }
 .gamma .sprite.focal {
   left: 607px;
@@ -594,7 +617,7 @@ section.two {
   top: 800px;
   z-index: 221;
 }
-.gamma .sprite.elementThree {
+.gamma .sprite.elementFive {
   left: 1300px;
   top: 1300px;
   z-index: 280;
@@ -629,13 +652,13 @@ section.two {
   padding: .7em 0 0;
 }
 .infoBox li:first-child {
-  padding-top: 0;
+  padding: 0;
 }
 .infoBox h2 {
   font-size: 2.5em;
 }
 .infoBox h3 {
-  font-size: 1.125em;
+  font-size: 1.0625em;
   color: #e51a1a;
   padding-top: 10px;
 }
@@ -643,8 +666,15 @@ section.two {
   padding-bottom: 1em;
 }
 .infoBox.pop {
-  position: relative;
+  position: absolute;
   width: 375px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.infoBox.pop img {
+  position: relative;
+  z-index: 20;
 }
 .infoBox .closer {
   position: absolute;
@@ -660,8 +690,8 @@ section.two {
 .thumbmatrix li {
   padding: 0 10px;
 }
-.thumbmatrix li:first-child {
-  padding: 0;
+.thumbmatrix bbedli:first-child {
+  padding: 0 !important;
 }
 .thumbmatrix li ul {
   float: none;
