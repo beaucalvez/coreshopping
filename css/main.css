@@ -354,6 +354,7 @@ td {
 body {
   font-family: Lora, Garamond, "Times New Roman", Times, Georgia, serif;
   color: #242424;
+  font-size: 0.9375em;
 }
 nav.main {
   font-family: Lato, Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
@@ -454,8 +455,9 @@ section.two {
 .sprite {
   position: absolute;
 }
-.sprite.focal {
-  cursor: pointer;
+/* .sprite.focal {cursor: pointer;.transition(.8s);} */
+.sprite.focal:hover {
+  transform: scale(1.2, 1.2);
 }
 .alpha {
   /* Woman in dress */
@@ -528,13 +530,13 @@ section.two {
 }
 .alpha .sprite.elementOne {
   left: 1024px;
-  top: 1091px;
+  top: 1400px;
   z-index: 240;
   background-attachment: fixed;
 }
 .alpha .sprite.elementTwo {
   left: 80px;
-  top: 1000px;
+  top: 700px;
   z-index: 230;
 }
 .alpha .sprite.elementThree {
@@ -543,6 +545,7 @@ section.two {
   z-index: 231;
 }
 .alpha .sprite.shoppingHours {
+  width: 460px;
   left: 120px;
   top: 1644px;
   z-index: 220;
@@ -644,7 +647,7 @@ section.two {
 }
 .gamma .sprite.focal {
   left: 200px;
-  top: 600px;
+  top: 500px;
   z-index: 250;
   /* hidden infobox positioning */
 
@@ -661,7 +664,7 @@ section.two {
 .gamma .sprite.elementTwo {
   left: 748px;
   top: 1300px;
-  z-index: 190;
+  z-index: 205;
 }
 .gamma .sprite.elementThree {
   left: 460px;
@@ -688,7 +691,6 @@ section.two {
 .infoBox {
   background: #fff;
   padding: 10px;
-  text-align: center;
   box-shadow: 3px 3px 6px #ccc;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   /* Positioned outside the box */
@@ -741,17 +743,21 @@ section.two {
   top: 10px;
   right: 14px;
 }
+.thumbmatrix {
+  width: 800px;
+}
 .thumbmatrix .infoBox {
   padding: 0 0 10px 0;
   width: 225px;
   margin-right: 20px;
   float: left;
+  height: 322px;
 }
 .thumbmatrix li {
   padding: 0 10px;
 }
-.thumbmatrix bbedli:first-child {
-  padding: 0 !important;
+.thumbmatrix li:first-child {
+  padding: 0;
 }
 .thumbmatrix li ul {
   float: none;
@@ -759,12 +765,16 @@ section.two {
 }
 .thumbmatrix li li {
   list-style-type: disc;
-  font-size: 0.75em;
+  font-size: 0.8em;
   padding: 0;
   list-style-position: inside;
 }
 .thumbmatrix p {
-  font-size: 0.75em;
+  font-size: 0.8em;
+}
+.thumbmatrix .tilematrix {
+  /* 		li:first-child {padding: 10px 0 0 0;} */
+
 }
 .thumbmatrix .tilematrix li {
   float: left;

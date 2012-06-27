@@ -451,7 +451,7 @@ td {
 @border-color: #3e3e3e;
 @highlight-color:#e51a1a;
 
-body {font-family: @serif;color:@font-color;}
+body {font-family: @serif;color:@font-color;font-size:15/16em;}
 nav.main {font-family: @sans-serif;}
 
 
@@ -540,7 +540,9 @@ section {
 }
 
 .sprite {position: absolute;}
-.sprite.focal {cursor: pointer;}
+/* .sprite.focal {cursor: pointer;.transition(.8s);} */
+.sprite.focal:hover {transform:  scale(1.2,1.2);}
+
 .alpha {/* Woman in dress */
 	
 	height:1500px;
@@ -596,14 +598,14 @@ section {
 	/* small blurry diamond */
 	.sprite.elementOne {
 		left:1024px;
-		top: 1091px;
+		top: 1400px;
 		z-index: 240;
 		background-attachment:fixed;
 	}
 	/* large blurry diamond */
 	.sprite.elementTwo {
 		left:80px;
-		top: 1000px;
+		top: 700px;
 		z-index: 230;
 	}
 	
@@ -616,9 +618,11 @@ section {
 
 	/* shopping hours */
 	.sprite.shoppingHours {
+		width: 460px;
 		left:120px;
 		top: 1644px;
 		z-index: 220;
+
 	}
 	/* Dress element */
 	.sprite.dresstransition {
@@ -710,7 +714,7 @@ section {
 	/* Focal sprite with info box about product */
 	.sprite.focal {
 		left:200px;
-		top: 600px;
+		top: 500px;
 		z-index: 250;
 		
 		/* hidden infobox positioning */
@@ -726,7 +730,7 @@ section {
 	.sprite.elementTwo {
 		left:748px;
 		top: 1300px;
-		z-index: 190;
+		z-index: 205;
 	}
 	/* Small blurry leaf on the right */
 	.sprite.elementThree {
@@ -761,7 +765,6 @@ section {
 .infoBox {
 	background: #fff;
 	padding: 10px;
-	text-align: center;
 	box-shadow: 3px 3px 6px #ccc;
 	box-shadow: 3px 3px 6px rgba(0,0,0,.3);
 	p{font-size: 12/16em;}
@@ -794,17 +797,21 @@ section {
 	
 }
 .thumbmatrix {
-	.infoBox  {padding:0 0 10px 0;width:225px;margin-right:20px;float:left;}
-	li {padding:0 10px;}bbed
+	width: 800px;
+	.infoBox  {padding:0 0 10px 0;width:225px;margin-right:20px;float:left;height:322px;}
+	li {padding:0 10px;}
 	
-	li:first-child{padding:0 !important;}
+	li:first-child{padding:0;}
 	li ul {float:none;padding:5px 0 11px;}
-	li li {list-style-type: disc;font-size: 12/16em;padding:0;list-style-position: inside;}
-	p {font-size: 12/16em;}
+	li li {list-style-type: disc;font-size: 12/15em;padding:0;list-style-position: inside;}
+	p {font-size: 12/15em;}
+	
+	
 	
 	.tilematrix {
 		
 		li {float:left;margin-right:10px;list-style-type: none;padding:10px 0 0 0;}
+/* 		li:first-child {padding: 10px 0 0 0;} */
 		li.nomargin {margin-right: 0;}
 	}
 	
