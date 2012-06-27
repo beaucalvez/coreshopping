@@ -39,11 +39,11 @@
 
 <div class="bgcontainer">
 <!-- WOMAN ON THE TOP -->
-<section class="zero" data-stellar-background-ratio=".2">
+<section class="zero">
 	<div class="scrollblock">
 	<article class="alpha">
 		<!-- Woman -->
-		<article class="sprite womandress">
+		<article class="sprite womandress" data-stellar-ratio="1.2">
 			<img src="/img/Lingillustrations_1_dresswoman.png" alt="" />
 		</article>
 		<header class="sprite" data-stellar-ratio="1.6">
@@ -100,11 +100,11 @@
 	</div>
 </section>
 <!-- MAN IN THE MIDDLE -->
-<section class="one" data-stellar-background-ratio=".2">
+<section class="one">
 	<div class="scrollblock">
 	<article class="beta">
 		<!-- MAN -->
-		<article class="sprite man">
+		<article class="sprite man" data-stellar-ratio="1.2">
 			<img src="/img/Lingillustrations_2_manextended.png" alt="" />
 		</article>
 		<!-- Blurry bird on the left -->
@@ -152,11 +152,11 @@
 	</div>
 </section>
 
-<section class="two" data-stellar-background-ratio=".2">
+<section class="two">
 	<div class="scrollblock">
 	<article class="gamma">
 		<!-- Woman Sitting Down -->
-		<article class="sprite womansit">
+		<article class="sprite womansit" data-stellar-ratio="1.2">
 			<img src="/img/Lingillustrations_3_sittingwoman.png" alt="" />
 		</article>
 		<!-- branches on the left -->
@@ -228,9 +228,7 @@
 	</div>
 </section>
 </div>
-
-
-<!-- <footer>Footer</footer> -->
+<footer>&nbsp;</footer>
 
 
 
@@ -265,8 +263,8 @@ $(document).ready(function(){
 	var scrollorama = $.scrollorama({ blocks:'.scrollblock' });
 
 	// WOMAN ON THE TOP ----------------------------------------------------------------
-	scrollorama.animate('.alpha .womandress',{ delay: 1600, duration: 200, property:'left', start:60, end:1098 });
-	scrollorama.animate('.alpha .womandress',{ delay: 1600, duration: 100, property:'top', start:20, end:-2500 });
+	// scrollorama.animate('.alpha .womandress',{ delay: 1600, duration: 200, property:'left', start:60, end:1098 });
+// 	scrollorama.animate('.alpha .womandress',{ delay: 1600, duration: 100, property:'top', start:20, end:-2500 });
 	// scrollorama.animate('.alpha .dresstransition',{ delay: 1600, duration: 300, property:'left', start:-1038, end:1700 });
 
 

@@ -412,8 +412,17 @@ body .primary nav.main {
   height: 81px;
 }
 /* Parallax-sections-start ---------------------------------------------- */
-/* .bgcontainer {background-image:url(/img/bg.combined.jpg);background-attachment: fixed;} */
+.bgcontainer {
+  /* background-image:url(/img/bg.test.png); */
+
+  /* background-attachment: fixed; */
+
+  /* text-align:center;  */
+
+}
 section {
+  margin: 0 auto;
+  width: 1700px;
   /* Top illustration background */
 
   /* Middle illustration background*/
@@ -423,18 +432,24 @@ section {
 }
 section.zero {
   background-image: url(/img/bg.top.jpg);
-  height: 1785px;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 1500px;
+  /* 		background-attachment: fixed; */
+
 }
 section.one {
   background-image: url(/img/bg.mid.jpg);
-  height: 1832px;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 1500px;
+  /* 		background-attachment: fixed; */
+
 }
 section.two {
   background-image: url(/img/bg.bottom.jpg);
-  height: 1500px;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 1200px;
+  /* 		background-attachment: fixed; */
+
 }
 .sprite {
   position: absolute;
@@ -445,7 +460,7 @@ section.two {
 .alpha {
   /* Woman in dress */
 
-  height: 1820px;
+  height: 1500px;
   position: relative;
   z-index: 200;
   /* Main header */
@@ -480,11 +495,12 @@ section.two {
 .alpha header.sprite {
   text-align: center;
   top: 140px;
-  left: 221px;
+  left: 180px;
   border-top: 1px solid #3e3e3e;
   border-bottom: 1px solid #3e3e3e;
   width: 26.625em;
   height: 9.375em;
+  z-index: 205;
 }
 .alpha header.sprite h2 {
   width: 15.777777777777779em;
@@ -494,7 +510,7 @@ section.two {
   top: 103px;
 }
 .alpha .sprite.womandress {
-  left: 60px;
+  left: 100px;
   top: 20px;
   z-index: 200;
 }
@@ -539,7 +555,7 @@ section.two {
 .beta {
   /* Man */
 
-  height: 1520px;
+  height: 1500px;
   position: relative;
   z-index: 200;
   /* Focal sprite with info box */
@@ -590,7 +606,7 @@ section.two {
   z-index: 270;
 }
 .gamma {
-  height: 1820px;
+  height: 1200px;
   position: relative;
   /* Woman sitting down */
 
@@ -672,6 +688,7 @@ section.two {
 .infoBox {
   background: #fff;
   padding: 10px;
+  text-align: center;
   box-shadow: 3px 3px 6px #ccc;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   /* Positioned outside the box */
@@ -757,6 +774,12 @@ section.two {
 }
 .thumbmatrix .tilematrix li.nomargin {
   margin-right: 0;
+}
+footer {
+  position: relative;
+  background: #232323;
+  height: 350px;
+  z-index: 1000;
 }
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.

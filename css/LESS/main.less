@@ -502,27 +502,39 @@ body .primary {
 
 /* Parallax-sections-start ---------------------------------------------- */
 
-/* .bgcontainer {background-image:url(/img/bg.combined.jpg);background-attachment: fixed;} */
+.bgcontainer {
+/* background-image:url(/img/bg.test.png); */
+/* background-attachment: fixed; */
+/* text-align:center;  */
+	
+	
+	}
 section {
+	margin:0 auto;
+	width:1700px;
+	
 	/* Top illustration background */
 	&.zero{
 		background-image:url(/img/bg.top.jpg);
-		height: 1785px;
-		background-attachment: fixed;
+		background-repeat: no-repeat;
+		height: 1500px;
+/* 		background-attachment: fixed; */
 	}
 	
 	/* Middle illustration background*/
 	&.one{
 		background-image:url(/img/bg.mid.jpg);
-		height: 1832px;
-		background-attachment: fixed;
+		background-repeat: no-repeat;
+		height: 1500px;
+/* 		background-attachment: fixed; */
 	}
 	
 	/* Last illustration background*/
 	&.two{
 		background-image:url(/img/bg.bottom.jpg);
-		height: 1500px;
-		background-attachment: fixed;
+		background-repeat: no-repeat;
+		height: 1200px;
+/* 		background-attachment: fixed; */
 	}
 
 }
@@ -531,7 +543,7 @@ section {
 .sprite.focal {cursor: pointer;}
 .alpha {/* Woman in dress */
 	
-	height:1820px;
+	height:1500px;
 	position: relative;
 	z-index: 200;
 	
@@ -555,16 +567,17 @@ section {
 	header.sprite {
 		h2 {width:426/27em;}
 		text-align: center;
-		top:140px;left:221px;
+		top:140px;left:180px;
 		border-top: 1px solid @border-color;
 		border-bottom: 1px solid @border-color;
 		width: 426/16em;
 		height: 150/16em;
+		z-index:205;
 		
 		p {position: relative;top:103px;}
 	}
 	.sprite.womandress {
-		left:60px;
+		left:100px;
 		top:20px;
 		z-index: 200;
 	} 
@@ -619,7 +632,7 @@ section {
 
 .beta {/* Man */
 	
-	height:1520px;
+	height:1500px;
 	position: relative;
 	z-index: 200;
 	
@@ -673,7 +686,7 @@ section {
 
 .gamma {
 
-	height:1820px;
+	height:1200px;
 	position: relative;
 	/* Woman sitting down */
 	.sprite.womansit {
@@ -748,7 +761,7 @@ section {
 .infoBox {
 	background: #fff;
 	padding: 10px;
-	
+	text-align: center;
 	box-shadow: 3px 3px 6px #ccc;
 	box-shadow: 3px 3px 6px rgba(0,0,0,.3);
 	p{font-size: 12/16em;}
@@ -797,6 +810,7 @@ section {
 	
 }
 
+footer {position:relative; background: #232323;height: 350px;z-index:1000;}
 
 
 
