@@ -349,8 +349,9 @@ td {
    Author: Beau Calvez, Infrequently tweeting as @Avengio
    ========================================================================== */
 /* Variables ------------------------------------------------------------- */
-/* Fonts  */
-/* Color */
+/* Fonts - add elements here  */
+/* Color vars */
+/* Functions */
 body {
   font-family: Lora, Garamond, "Times New Roman", Times, Georgia, serif;
   color: #242424;
@@ -359,18 +360,18 @@ body {
 nav.main {
   font-family: Lato, Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
 }
-/* transitions */
-/* Links ----------------------------------------------------------------- */
+/* Links */
 a,
 a:link {
   color: #e51a1a;
   text-decoration: none;
   opacity: 1;
-  -moz-transition: all 0.8s;
-  -webkit-transition: all 0.8s;
-  -ms-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  transition: all 0.8s;
+  -ms-transition: 0.8s 0.6s;
+  -moz-transition: 0.8s 0.6s;
+  -webkit-transition: 0.8s 0.6s;
+  -ms-transition: 0.8s 0.6s;
+  -o-transition: 0.8s 0.6s;
+  transition: 0.8s 0.6s;
 }
 a:hover,
 a:active,
@@ -391,9 +392,9 @@ a.highlight {
 }
 /* HEADER --------------------------------------------------------------- */
 body .primary {
-  background: #000;
+  background: black;
   background-attachment: fixed;
-  /* TODO: Remove height */
+  /* TODO: Remove/adjust height when nav is in place */
 
   height: 107px;
   /* Supplemental nav */
@@ -402,67 +403,80 @@ body .primary {
 
 }
 body .primary nav.supplemental {
-  /* TODO: Remove height */
+  /* TODO: Remove/adjust height when nav is in plave */
 
   height: 26px;
 }
 body .primary nav.main {
   background: #232323;
-  /* TODO: Remove height */
+  /* TODO: Remove/adjust height when nav is in place */
 
   height: 81px;
 }
-/* Parallax-sections-start ---------------------------------------------- */
-.bgcontainer {
-  /* background-image:url(/img/bg.test.png); */
-
-  /* background-attachment: fixed; */
-
-  /* text-align:center;  */
-
-}
+/* PARALLAX-SECTIONS-START ---------------------------------------------- */
 section {
   margin: 0 auto;
-  width: 1700px;
-  /* Top illustration background */
+  /* width:1700px; */
 
-  /* Middle illustration background*/
+  height: 1500px;
+  background-repeat: no-repeat;
+  /* Top vignette background */
 
-  /* Last illustration background*/
+  /* Middle vignette background */
+
+  /* Last vignette background */
 
 }
 section.zero {
   background-image: url(/img/bg.top.jpg);
-  background-repeat: no-repeat;
-  height: 1500px;
-  /* 		background-attachment: fixed; */
-
 }
 section.one {
   background-image: url(/img/bg.mid.jpg);
-  background-repeat: no-repeat;
-  height: 1500px;
-  /* 		background-attachment: fixed; */
-
 }
 section.two {
   background-image: url(/img/bg.bottom.jpg);
-  background-repeat: no-repeat;
   height: 1200px;
-  /* 		background-attachment: fixed; */
-
 }
 .sprite {
   position: absolute;
 }
-/* .sprite.focal {cursor: pointer;.transition(.8s);} */
-.sprite.focal:hover {
-  transform: scale(1.2, 1.2);
+.sprite.focal {
+  cursor: pointer;
+}
+.sprite.focal img.productImage {
+  -ms-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+}
+.sprite.focal img.productImage:hover {
+  -ms-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.sprite.focal img.scaleUp {
+  -ms-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.hovericon {
+  position: absolute;
+  box-shadow: 3px 3px 6px #ccc;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  z-index: 20;
 }
 .alpha {
-  /* Woman in dress */
+  /* TOP VIGNETTE */
 
-  height: 1500px;
+  margin: 0 auto;
   position: relative;
   z-index: 200;
   /* Main header */
@@ -523,10 +537,14 @@ section.two {
   /* hidden infobox positioning */
 
 }
-.alpha .sprite.focal .pop {
+.alpha .sprite.focal .pop,
+.alpha .sprite.focal .hovericon {
   top: 125px;
   left: 120px;
   z-index: -10;
+}
+.alpha .sprite.focal .hovericon {
+  z-index: 10;
 }
 .alpha .sprite.elementOne {
   left: 1024px;
@@ -556,11 +574,14 @@ section.two {
   z-index: 201;
 }
 .beta {
-  /* Man */
+  /* MIDDLE VIGNETTE */
 
   height: 1500px;
   position: relative;
   z-index: 200;
+  margin: 0 auto;
+  /* 	width:1300px; */
+
   /* Focal sprite with info box */
 
   /* small blurry bird on the left` */
@@ -584,9 +605,14 @@ section.two {
   /* hidden infobox positioning */
 
 }
-.beta .sprite.focal .pop {
+.beta .sprite.focal .pop,
+.beta .sprite.focal .hovericon {
   top: 202px;
   left: -230px;
+}
+.beta .sprite.focal .hovericon {
+  z-index: 10;
+  left: 0;
 }
 .beta .sprite.elementOne {
   left: 30px;
@@ -609,8 +635,13 @@ section.two {
   z-index: 270;
 }
 .gamma {
+  /* BOTTOM VIGNETTE */
+
   height: 1200px;
   position: relative;
+  margin: 0 auto;
+  /* 	width:1300px; */
+
   /* Woman sitting down */
 
   /* Focal sprite with info box */
@@ -652,9 +683,13 @@ section.two {
   /* hidden infobox positioning */
 
 }
-.gamma .sprite.focal .pop {
-  top: 225px;
-  left: 200px;
+.gamma .sprite.focal .pop,
+.gamma .sprite.focal .hovericon {
+  top: 235px;
+  left: 180px;
+}
+.gamma .sprite.focal .hovericon {
+  z-index: 10;
 }
 .gamma .sprite.elementOne {
   left: 30px;

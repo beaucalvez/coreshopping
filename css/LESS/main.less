@@ -442,110 +442,91 @@ td {
 
 /* Variables ------------------------------------------------------------- */
 
-/* Fonts  */
+/* Fonts - add elements here  */
 @serif: Lora, Garamond, "Times New Roman", Times, Georgia, serif; 
 @sans-serif: Lato, Helvetica, "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
 
-/* Color */
+/* Color vars */
 @font-color: #242424;
 @border-color: #3e3e3e;
 @highlight-color:#e51a1a;
 
+
+/* Functions */
+.transition (@prop:all, @time: .6s) {
+	-ms-transition: @prop @time;
+	-moz-transition: @prop @time; 
+	-webkit-transition: @prop @time;  
+	-ms-transition: @prop @time;  
+	-o-transition: @prop @time;  
+	transition: @prop @time;
+}
+.transformScale (@x:1.2,@y:1.2) {
+	-ms-transform: scale(@x,@y); 
+	-moz-transform: scale(@x,@y); 
+	-webkit-transform: scale(@x,@y);  
+	-ms-transform: scale(@x,@y);  
+	-o-transform: scale(@x,@y);  
+	transform: scale(@x,@y);
+}
+
 body {font-family: @serif;color:@font-color;font-size:15/16em;}
 nav.main {font-family: @sans-serif;}
 
-
-/* transitions */
-.transition (@time: .6s) {
-	-moz-transition: all @time; 
-	-webkit-transition: all @time;  
-	-ms-transition: all @time;  
-	-o-transition: all @time;  
-	transition: all @time;
-}
-
-
-/* Links ----------------------------------------------------------------- */
+/* Links */
 
 a, a:link {color:@highlight-color;text-decoration: none;opacity:1; .transition(.8s);}
 a:hover,a:active, a:focus {color:@highlight-color;text-decoration: underline;opacity:.8;}
-
-
 
 a.button {display:inline-block;padding:3px 7px;color:#fff;text-decoration:none;border: 1px solid @highlight-color;}
 a.highlight {background: @highlight-color;}
 
 
-
 /* HEADER --------------------------------------------------------------- */
 body .primary {
-	background: #000;
+	background: black;
 	background-attachment: fixed;
-	/* TODO: Remove height */
+	/* TODO: Remove/adjust height when nav is in place */
 	height: 107px;
 	/* Supplemental nav */
 	nav.supplemental {
-		/* TODO: Remove height */
+		/* TODO: Remove/adjust height when nav is in plave */
 		height: 26px;
 	}
 	
 	/* Main nav */
 	nav.main {
 		background: #232323;
-		/* TODO: Remove height */
+		/* TODO: Remove/adjust height when nav is in place */
 		height: 81px;
 	}
-	
-
 }
 
 
-/* Parallax-sections-start ---------------------------------------------- */
-
-.bgcontainer {
-/* background-image:url(/img/bg.test.png); */
-/* background-attachment: fixed; */
-/* text-align:center;  */
-	
-	
-	}
+/* PARALLAX-SECTIONS-START ---------------------------------------------- */
 section {
 	margin:0 auto;
-	width:1700px;
+	/* width:1700px; */
+	height:1500px;
+	background-repeat: no-repeat;
 	
-	/* Top illustration background */
-	&.zero{
-		background-image:url(/img/bg.top.jpg);
-		background-repeat: no-repeat;
-		height: 1500px;
-/* 		background-attachment: fixed; */
-	}
-	
-	/* Middle illustration background*/
-	&.one{
-		background-image:url(/img/bg.mid.jpg);
-		background-repeat: no-repeat;
-		height: 1500px;
-/* 		background-attachment: fixed; */
-	}
-	
-	/* Last illustration background*/
-	&.two{
-		background-image:url(/img/bg.bottom.jpg);
-		background-repeat: no-repeat;
-		height: 1200px;
-/* 		background-attachment: fixed; */
-	}
-
+	/* Top vignette background */
+	&.zero{background-image:url(/img/bg.top.jpg);}
+	/* Middle vignette background */
+	&.one{background-image:url(/img/bg.mid.jpg);}
+	/* Last vignette background */
+	&.two{background-image:url(/img/bg.bottom.jpg);height: 1200px;}
 }
 
 .sprite {position: absolute;}
-/* .sprite.focal {cursor: pointer;.transition(.8s);} */
-.sprite.focal:hover {transform:  scale(1.2,1.2);}
+.sprite.focal {cursor: pointer;}
+.sprite.focal img.productImage {.transformScale(.9,.9)}
+.sprite.focal img.productImage:hover {.transformScale(1,1);}
+.sprite.focal img.scaleUp{.transformScale(1,1);}
+.hovericon {position:absolute;box-shadow: 3px 3px 6px #ccc;box-shadow: 3px 3px 6px rgba(0,0,0,.3);z-index:20;}
 
-.alpha {/* Woman in dress */
-	
-	height:1500px;
+.alpha { /* TOP VIGNETTE */
+	margin:0 auto;
 	position: relative;
 	z-index: 200;
 	
@@ -562,7 +543,6 @@ section {
 		font-size: 27/16em;
 		position:absolute;
 		top:-1.5em
-
 		
 	}
 	/* Main header */
@@ -592,8 +572,8 @@ section {
 		
 		
 	/* hidden infobox positioning */
-	.pop {top:125px;left:120px;z-index:-10;}
-
+	.pop,.hovericon{top:125px;left:120px;z-index:-10;}
+	.hovericon {z-index:10;}
 	}
 	/* small blurry diamond */
 	.sprite.elementOne {
@@ -630,25 +610,21 @@ section {
 		top: 1529px;
 		z-index: 201; 
 	}
-
-	
 }
 
-.beta {/* Man */
+.beta {/* MIDDLE VIGNETTE */
 	
 	height:1500px;
 	position: relative;
 	z-index: 200;
+	margin:0 auto;
+/* 	width:1300px; */
 	
 	.sprite.man {
 		left:0;
 		top:200px;
 		z-index: 220;
-	
-	
-	
 	} 
-	
 	
 	/* Focal sprite with info box */
 	.sprite.focal {
@@ -657,7 +633,8 @@ section {
 		z-index: 250;
 		
 		/* hidden infobox positioning */
-		.pop {top:202px;left:-230px}
+		.pop,.hovericon {top:202px;left:-230px}
+		.hovericon {z-index:10;left:0}
 
 	}
 	/* small blurry bird on the left` */
@@ -683,15 +660,15 @@ section {
 		left:367px;
 		top:1300px;
 		z-index: 270;
-	
 	}
-
 }
 
-.gamma {
+.gamma { /* BOTTOM VIGNETTE */
 
 	height:1200px;
 	position: relative;
+	margin:0 auto;
+/* 	width:1300px; */
 	/* Woman sitting down */
 	.sprite.womansit {
 		left: 390px;
@@ -718,7 +695,8 @@ section {
 		z-index: 250;
 		
 		/* hidden infobox positioning */
-		.pop {top:225px;left:200px}
+		.pop,.hovericon {top:235px;left:180px}
+		.hovericon {z-index:10;}
 	}
 	/* small blurry leaf on the left` */
 	.sprite.elementOne {
@@ -791,6 +769,7 @@ section {
 		h3 {padding-top:0;}
 		img {position:relative;z-index: 20;}
 	}
+	
 	.closer {position:absolute; top:10px;right:14px;}
 	
 	
