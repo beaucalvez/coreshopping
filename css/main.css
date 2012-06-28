@@ -416,8 +416,7 @@ body .primary nav.main {
 /* PARALLAX-SECTIONS-START ---------------------------------------------- */
 section {
   margin: 0 auto;
-  /* width:1700px; */
-
+  width: 1700px;
   height: 1500px;
   background-repeat: no-repeat;
   /* Top vignette background */
@@ -479,6 +478,7 @@ section.two {
   margin: 0 auto;
   position: relative;
   z-index: 200;
+  width: 1700px;
   /* Main header */
 
   /* Focal sprite with info box */
@@ -580,8 +580,7 @@ section.two {
   position: relative;
   z-index: 200;
   margin: 0 auto;
-  /* 	width:1300px; */
-
+  width: 1700px;
   /* Focal sprite with info box */
 
   /* small blurry bird on the left` */
@@ -640,8 +639,7 @@ section.two {
   height: 1200px;
   position: relative;
   margin: 0 auto;
-  /* 	width:1300px; */
-
+  width: 1700px;
   /* Woman sitting down */
 
   /* Focal sprite with info box */
@@ -721,6 +719,9 @@ section.two {
   top: 1258px;
   z-index: 215;
 }
+.gamma .thumbmatrix .infoBox {
+  height: 322px;
+}
 /* Parallax-section-end ------------------------------------------------------ */
 /* Common Elements ----------------------------------------------------------- */
 .infoBox {
@@ -786,7 +787,6 @@ section.two {
   width: 225px;
   margin-right: 20px;
   float: left;
-  height: 322px;
 }
 .thumbmatrix li {
   padding: 0 10px;
@@ -812,10 +812,10 @@ section.two {
 
 }
 .thumbmatrix .tilematrix li {
-  float: left;
-  margin-right: 10px;
+  display: inline-block;
   list-style-type: none;
   padding: 10px 0 0 0;
+  margin-right: 7px;
 }
 .thumbmatrix .tilematrix li.nomargin {
   margin-right: 0;
@@ -825,6 +825,7 @@ footer {
   background: #232323;
   height: 350px;
   z-index: 1000;
+  width: 1700px;
 }
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.

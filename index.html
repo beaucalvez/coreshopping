@@ -48,7 +48,7 @@
 		<header class="sprite" data-stellar-ratio="1.6">
 			<h2>Experience the luxury of</h2>
 			<h1>Calgary’s Only Downtown<br />Shopping Centre</h1>
-			<p>Scroll to Explore<br /><img src="/img/scrolldown-arrow.png" alt="scroll down" /></p>
+			<p class="scrollicon">Scroll to Explore<br /><img src="/img/scrolldown-arrow.png" alt="scroll down" /></p>
 		</header>
 		<!-- PRODUCT HIGHLIGHT – Focussed diamond ring -->
 		<article class="sprite focal" data-stellar-ratio="1.4">
@@ -258,7 +258,9 @@ $(document).ready(function(){
 	});
 	// Scrollorama: jQuery plugin for traversing elements
 	var scrollorama = $.scrollorama({ blocks:'.scrollblock' });
-	// MAN IN THE MIDDLE ---------------------------------------------------------------
+	// TOP VIGNETTE ---------------------------------------------------------------
+	scrollorama.animate('.alpha .scrollicon',{ delay: 0, duration: 50, property:'opacity', start:1, end:0 });
+	// MIDDLE VIGNETTE ---------------------------------------------------------------
 	scrollorama.animate('.beta .elementOne',{ delay: 140, duration: 1000, property:'left', start:0, end:1400 });
 	scrollorama.animate('.beta .elementOne',{ delay: 140, duration: 1000, property:'top', start:300, end:-300 });
 	scrollorama.animate('.beta .elementTwo',{ delay: 400, duration: 700, property:'left', start:880, end:0 });
@@ -266,7 +268,7 @@ $(document).ready(function(){
 	scrollorama.animate('.beta .elementThree',{ delay: 900, duration: 900, property:'left', start:200, end:1200 });
 	scrollorama.animate('.beta .elementThree',{ delay: 900, duration: 900, property:'top', start:1250, end:-300 });
 
-	// WOMAN ON THE BOTTOM ------------------------------------------------------------
+	// BOTTOM VIGNETTE ------------------------------------------------------------
 	scrollorama.animate('.gamma .elementOne',{ delay: 400, duration: 1300, property:'left', start:0, end:1300 });
 	scrollorama.animate('.gamma .elementTwo',{ delay: 200, duration: 1150, property:'left', start:200, end:1600 });
 	scrollorama.animate('.gamma .elementTwo',{ delay: 0, duration: 1300, property:'top', start:1000, end:-200 });
@@ -275,7 +277,16 @@ $(document).ready(function(){
 	scrollorama.animate('.gamma .elementFour',{ delay: 520, duration: 1120, property:'left', start:100, end:1200 });
 	scrollorama.animate('.gamma .elementFour',{ delay: 420, duration: 1100, property:'top', start:1400, end:-50 });	
 	scrollorama.animate('.gamma .branchesright',{ delay: 200, duration: 800, property:'top', start:1500, end:-1000 });
+	scrollorama.animate('.gamma .branchesright',{ delay: 0, duration: 6000, property:'right', start:0, end:0 });
 	scrollorama.animate('.gamma .branchesleft',{ delay: 200, duration: 650, property:'top', start:1100, end:-1100 });
+	
+	scrollorama.onBlockChange(function() {
+    	console.log('You just scrolled to block#'+scrollorama.blockIndex);
+	});
+	
+	
+	
+	
 	// Let’s hide and show our focal product details
 	$(".alpha .focal, .beta .focal, .gamma .sprite.focal").click(function(e) {
 		var o = $(this).find('.pop');
@@ -287,6 +298,7 @@ $(document).ready(function(){
 			$(i).addClass('scaleUp');
 		}else {$(i).removeClass('scaleUp');}
 	});
+	
 });
 </script>
 
