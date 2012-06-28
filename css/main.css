@@ -416,7 +416,8 @@ body .primary nav.main {
 /* PARALLAX-SECTIONS-START ---------------------------------------------- */
 section {
   margin: 0 auto;
-  width: 1700px;
+  /* width:1700px; */
+
   height: 1500px;
   background-repeat: no-repeat;
   /* Top vignette background */
@@ -478,7 +479,8 @@ section.two {
   margin: 0 auto;
   position: relative;
   z-index: 200;
-  width: 1700px;
+  /* width:1700px; */
+
   /* Main header */
 
   /* Focal sprite with info box */
@@ -580,7 +582,8 @@ section.two {
   position: relative;
   z-index: 200;
   margin: 0 auto;
-  width: 1700px;
+  /* width:1700px; */
+
   /* Focal sprite with info box */
 
   /* small blurry bird on the left` */
@@ -825,7 +828,7 @@ footer {
   background: #232323;
   height: 350px;
   z-index: 1000;
-  width: 1700px;
+  /* width:1700px */
 }
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
